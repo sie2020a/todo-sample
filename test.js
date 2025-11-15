@@ -8,3 +8,9 @@ test('add/list の基本', () => {
   todo.add('鉛筆を買う');
   assert.deepStrictEqual(todo.list(), ['ノートを買う', '鉛筆を買う']);
 });
+
+test('done/donelist の基本', () => {
+  todo.done('鉛筆を買う');
+  assert.deepStrictEqual(todo.list(), ['ノートを買う']);
+  assert.deepStrictEqual(todo.donelist(), ['鉛筆を買う']);
+});
